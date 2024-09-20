@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGAMENTO</title>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .copy-button {
+            background-color: #444;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .logo {
+                width: 80px;
+            }
+
+            h1 {
+                font-size: 1.2em;
+            }
+
+            .copy-button {
+                padding: 5px;
+                margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://open.spotify.com/playlist/5RECn8Qtt3J5T7zsattGTv?si=VhJqXtwMQZS3JNjz2ak46Q" target="_blank">
+            <img src="logo.png.png" alt="Logo" class="logo">
+        </a>
+        <h1>MINHAS CHAVES PIX PARA PAGAMENTO:</h1>
+        <ul>
+            <li><b>CHAVE 1:</b> <a href="https://nubank.com.br/cobrar/kk6ku/66ed4a65-ca26-47f4-b68e-a0e817d59b5c" target="_blank">Pagar com Nubank</a>
+                <button class="copy-button" onclick="copyToClipboard('https://nubank.com.br/cobrar/kk6ku/66ed4a65-ca26-47f4-b68e-a0e817d59b5c')">Copiar Chave</button>
+            </li>
+            <li><b>CHAVE 2:</b> vitorgabrielnerd@gmail.com
+                <button class="copy-button" onclick="copyToClipboard('vitorgabrielnerd@gmail.com')">Copiar Chave</button>
+            </li>
+        </ul>
+        <h2>MUITO OBRIGADO! thank you very much!</h2>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Chave copiada: ' + text);
+            }, function(err) {
+                console.error('Erro ao copiar chave: ', err);
+            });
+        }
+    </script>
+  
+       
+</body>
+</html>
+
+ 
